@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-title>Introduce Yourself</mat-card-title>
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <!-- <mat-label>Name</mat-label> -->
+        <input placeholder="Name" matInput [(ngModel)]="name">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <!-- <mat-label>Email</mat-label> -->
+        <input placeholder="Email" matInput [(ngModel)]="email">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+  

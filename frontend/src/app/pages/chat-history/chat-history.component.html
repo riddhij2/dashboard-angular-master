@@ -1,0 +1,6 @@
+<div *ngFor="let message of messages">
+    <div [ngClass]="{ 'user-message': message.isUser, 'api-message': !message.isUser }">
+      {{ message.text }}
+    </div>
+</div>
+  

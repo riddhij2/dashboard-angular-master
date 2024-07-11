@@ -1,0 +1,22 @@
+<div class="chat-container">
+  <div class="chat-input-container">
+    <div class="chat-input-field">
+      <div class="form-group d-flex align-items-center">
+        <input type="text" class="form-control" placeholder="Ask Your Question Here" [(ngModel)]="message">
+      </div>
+    </div>
+    <div class="chat-input-options d-flex align-items-center">
+      <div class="form-group">
+        <select class="form-control" [(ngModel)]="responseType" (change)="onSelectResponseType($event.target.value)">
+          <option *ngFor="let option of responseOptions" [value]="option.value">{{ option.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select class="form-control" [(ngModel)]="model" (change)="onSelectModel($event.target.value)">
+          <option value="default">Default</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary send-button" (click)="onSend()">Send</button>
+    </div>
+  </div>
+</div>

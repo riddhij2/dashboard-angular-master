@@ -1,0 +1,3 @@
+<app-chat-history></app-chat-history>
+<app-chat-input (sendMessage)="sendMessage($event.message, $event.responseType, $event.model)"></app-chat-input>
+<app-introduce-yourself *ngIf="showIntroduce" (introduce)="handleIntroduceYourself($event.name, $event.email)"></app-introduce-yourself>
