@@ -1,12 +1,16 @@
 :host {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 100vh;
-    background-color: #f5f5f5;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 10px;
+  box-sizing: border-box;
+}
 
-  
+@media (max-width: 768px) {
+  :host {
+    padding: 5px;
+  }
+}

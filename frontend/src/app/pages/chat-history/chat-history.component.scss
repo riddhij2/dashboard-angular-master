@@ -1,19 +1,31 @@
-.user-message {
+.chat-history-container {
+  height: 74vh;; /* Set a fixed height for the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 204vh;
+  max-width: 200vh;
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-end;
+
+  .user-message {
+    align-self: flex-end;
     text-align: right;
     background-color: #e0f7fa;
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
-    
   }
-  
+
   .api-message {
+    align-self: flex-start;
     text-align: left;
     background-color: #f1f8e9;
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
   }
-
-  
-  
+}

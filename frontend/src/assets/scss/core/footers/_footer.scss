@@ -8,6 +8,8 @@
 .footer {
     background: $footer-bg;
     padding: $footer-padding-y $footer-padding-x;
+    display: contents;
+    padding: 0.25rem 0;
 
     .col-footer {
         .heading {
