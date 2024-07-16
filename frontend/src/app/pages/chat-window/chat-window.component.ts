@@ -24,6 +24,7 @@ export class ChatWindowComponent implements OnInit {
     if (this.interactionCount === 3) {
       this.showIntroduceYourself();
     } else {
+      console.log("message sent ");
       this.chatService.sendMessage(message, responseType, model).subscribe(response => {
         this.receiveMessage(response);
       });
@@ -45,5 +46,10 @@ export class ChatWindowComponent implements OnInit {
   handleIntroduceYourself(event: { name: string, email: string }): void {
     this.showIntroduce = false;
     this.updateHistory(`Name: ${event.name}, Email: ${event.email}`, true);
+  }
+
+  
+  closeModal(): void {
+    this.showIntroduce = false;
   }
 }

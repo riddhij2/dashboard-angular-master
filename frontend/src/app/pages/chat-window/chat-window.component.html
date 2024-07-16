@@ -1,3 +1,7 @@
 <app-chat-history></app-chat-history>
 <app-chat-input (sendMessage)="sendMessage($event.message, $event.responseType, $event.model)"></app-chat-input>
-<app-introduce-yourself *ngIf="showIntroduce" (introduce)="handleIntroduceYourself($event)"></app-introduce-yourself>
+<app-introduce-yourself 
+  [showModal]="showIntroduce" 
+  (introduce)="handleIntroduceYourself($event)"
+  (closeModal)="closeModal()">
+</app-introduce-yourself>

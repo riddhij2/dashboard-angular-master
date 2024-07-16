@@ -19,4 +19,21 @@
     background-color: #007bff;
     border-color: #007bff;
   }
-  
+
+  .modal-dialog{
+    top:50px;
+  }
+
+  .modal-content{
+    top:60px;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1040; /* Make sure it's behind the modal but above other content */
+  }

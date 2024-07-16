@@ -21,6 +21,10 @@ export class ChatInputComponent implements OnInit {
   ngOnInit(): void { }
 
   onSend(): void {
+    if (this.message.trim() === '') {
+      alert('Please enter a message before sending.');
+      return;
+    }
     this.sendMessage.emit({ message: this.message, responseType: this.responseType, model: this.model });
     this.message = '';
   }

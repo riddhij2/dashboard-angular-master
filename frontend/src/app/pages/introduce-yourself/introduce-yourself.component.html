@@ -1,18 +1,25 @@
-<div class="card">
-  <div class="card-header">
-    Introduce Yourself
-  </div>
-  <div class="card-body">
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" class="form-control" placeholder="Name" [(ngModel)]="name" name="name" required>
+
+<div *ngIf="showModal" class="modal-backdrop fade show"></div>
+<div *ngIf="showModal" class="modal fade show" style="display: block;" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Introduce Yourself</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="onClose()">X</button>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" class="form-control" placeholder="Email" [(ngModel)]="email" name="email" required>
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Name" [(ngModel)]="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Email" [(ngModel)]="email" name="email" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
   </div>
 </div>

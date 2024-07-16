@@ -1,5 +1,5 @@
 .chat-history-container {
-  height: 74vh;; /* Set a fixed height for the container */
+  height: 73vh;; /* Set a fixed height for the container */
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 10px;
   border: 1px solid #ccc;
@@ -9,7 +9,7 @@
   max-width: 200vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  // justify-content: flex-end;
 
   .user-message {
     align-self: flex-end;
